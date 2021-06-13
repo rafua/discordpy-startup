@@ -17,6 +17,10 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong')
 
+    # 「/neko」と発言したら「にゃーん」が返る処理
+    if message.content == '/neko':
+        await message.channel.send('にゃーん')
+        
 @client.event
 async def on_member_join(member):
     await message.channel.send('にゃーん')
